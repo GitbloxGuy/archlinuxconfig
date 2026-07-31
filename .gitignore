@@ -23,3 +23,5 @@ obs-studio/
 /home/star/.config/mpv/shaders/cache
 
 pulse/
+
+electron-builder.json

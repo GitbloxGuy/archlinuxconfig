@@ -109,7 +109,7 @@ format = '\[[$state ($progress_current/$progress_total)]($style)\]'
 
 [git_status]
 # Disable scanning into untracked subdirectories (fixes the 1000+ count)
-type = "git"
+typechanged = "git"
 
 # Hide the untracked indicator entirely, OR set it to "?"
 untracked = ""
