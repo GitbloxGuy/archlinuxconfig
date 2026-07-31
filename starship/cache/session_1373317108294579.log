@@ -1,2 +1,0 @@
-[WARN] - (starship::config): Error in 'GitStatus' at 'ignored': Unknown key (Did you mean 'ignore_submodules'?)
-[WARN] - (starship::config): Failed to load config value: Error in 'GitStatus' at 'ignore_submodules': invalid type: string "", expected a boolean

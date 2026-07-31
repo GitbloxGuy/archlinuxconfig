@@ -6,4 +6,6 @@ zen/
 
 discord/
 
+starship/cache
+
 /home/star/.config/mpv/shaders/cache
