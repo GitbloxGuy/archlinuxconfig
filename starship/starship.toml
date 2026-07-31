@@ -108,21 +108,19 @@ format = '\[[+$added]($added_style)\]\[[-$deleted]($deleted_style)\]'
 format = '\[[$state ($progress_current/$progress_total)]($style)\]'
 
 [git_status]
-# Disable the indicator for files matched by .gitignore
-ignore_submodules= false
+# Disable scanning into untracked subdirectories (fixes the 1000+ count)
+type = "git"
 
-# Symbol for genuinely untracked files (files not in git or .gitignore)
-untracked = "?${count}"
+# Hide the untracked indicator entirely, OR set it to "?"
+untracked = ""
 
-# Clean state display (optional tweak for clarity)
-stashed = "=$"
+# Keep standard indicators for modified, staged, and ahead/behind states
 modified = "!${count}"
 staged = "+${count}"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-up_to_date = "✓"
-
+up_to_date = ""
 [gleam]
 format = '\[[$symbol($version)]($style)\]'
 

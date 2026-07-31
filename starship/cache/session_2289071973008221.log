@@ -1,0 +1,3 @@
+[WARN] - (starship::config): Error in 'GitStatus' at 'ignored': Unknown key (Did you mean 'ignore_submodules'?)
+[WARN] - (starship::config): Error in 'GitStatus' at 'options': Unknown key
+[WARN] - (starship::config): Error in 'GitStatus' at 'type': Unknown key (Did you mean 'typechanged'?)
