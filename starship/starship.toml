@@ -121,6 +121,7 @@ ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 up_to_date = ""
+
 [gleam]
 format = '\[[$symbol($version)]($style)\]'
 
