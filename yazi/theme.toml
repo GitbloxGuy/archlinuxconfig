@@ -1,0 +1,132 @@
+[manager]
+cwd = { fg = "#fabd2f" }
+
+hovered         = { fg = "#282828", bg = "#fabd2f" }
+preview_hovered = { fg = "#282828", bg = "#fabd2f" }
+
+find_keyword  = { fg = "#fe8019", bold = true }
+find_position = { fg = "#8ec07c", bg = "reset", bold = true }
+
+marker_selected = { fg = "#b8bb26", bg = "#b8bb26" }
+marker_copied   = { fg = "#fabd2f", bg = "#fabd2f" }
+marker_cut      = { fg = "#fb4934", bg = "#fb4934" }
+
+tab_active   = { fg = "#282828", bg = "#fabd2f" }
+tab_inactive = { fg = "#ebdbb2", bg = "#3c3836" }
+
+border_symbol = "│"
+border_style  = { fg = "#3c3836" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#3c3836", bg = "#3c3836" }
+
+mode_normal_main = { fg = "#282828", bg = "#fabd2f", bold = true }
+mode_normal_alt  = { fg = "#fabd2f", bg = "#3c3836" }
+
+mode_select_main = { fg = "#282828", bg = "#b8bb26", bold = true }
+mode_select_alt  = { fg = "#b8bb26", bg = "#3c3836" }
+
+mode_unset_main = { fg = "#282828", bg = "#fb4934", bold = true }
+mode_unset_alt  = { fg = "#fb4934", bg = "#3c3836" }
+
+progress_label  = { fg = "#ebdbb2", bold = true }
+progress_normal = { fg = "#fabd2f", bg = "#3c3836" }
+progress_error  = { fg = "#fb4934", bg = "#3c3836" }
+
+permissions_t = { fg = "#8ec07c" }
+permissions_r = { fg = "#fabd2f" }
+permissions_w = { fg = "#fb4934" }
+permissions_x = { fg = "#b8bb26" }
+permissions_s = { fg = "#3c3836" }
+
+[input]
+border   = { fg = "#fabd2f" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[select]
+border   = { fg = "#fabd2f" }
+active   = { fg = "#fabd2f" }
+inactive = {}
+
+[completion]
+border = { fg = "#fabd2f" }
+active = { fg = "#282828", bg = "#fabd2f" }
+inactive = {}
+[filetype]
+rules = [
+    { mime = "image/*", fg = "#8ec07c" },
+    { mime = "video/*", fg = "#fe8019" },
+    { mime = "audio/*", fg = "#fe8019" },
+    { mime = "application/zip", fg = "#fabd2f" },
+    { mime = "application/x-tar", fg = "#fabd2f" },
+    { mime = "application/x-bzip2", fg = "#fabd2f" },
+    { mime = "application/x-7z-compressed", fg = "#fabd2f" },
+    { mime = "application/x-rar", fg = "#fabd2f" },
+    { url = "*", is = "orphan", fg = "#fb4934" },
+    { url = "*", is = "exec", fg = "#b8bb26" },
+    { url = "*", is = "link", fg = "#83a598" },
+    { url = "*/", fg = "#fabd2f", bold = true },
+]
+[icon]
+dirs = [
+{ name = ".config",    text = "[.cfg]" },
+
+]
+files = [
+    { name = ".gitconfig", text = "[git]" },
+    { name = ".zshenv",    text = "[zsh]" },
+    { name = ".zshrc",     text = "[zsh]" },
+    { name = ".gitignore", text = "[git]" },
+]
+exts = [
+    { name = "mp3",  text = "[aud]" },
+    { name = "wav",  text = "[aud]" },
+    { name = "flac", text = "[aud]" },
+    { name = "ogg",  text = "[aud]" },
+    { name = "mp4",  text = "[vid]" },
+    { name = "mkv",  text = "[vid]" },
+    { name = "webm", text = "[vid]" },
+    { name = "avi",  text = "[vid]" },
+    { name = "mov",  text = "[vid]" },
+    { name = "jpg",  text = "[img]" },
+    { name = "jpeg", text = "[img]" },
+    { name = "png",  text = "[img]" },
+    { name = "gif",  text = "[img]" },
+    { name = "webp", text = "[img]" },
+    { name = "svg",  text = "[img]" },
+    { name = "bmp",  text = "[img]" },
+    { name = "zip",  text = "[zip]" },
+    { name = "tar",  text = "[zip]" },
+    { name = "gz",   text = "[zip]" },
+    { name = "7z",   text = "[zip]" },
+    { name = "rar",  text = "[zip]" },
+    { name = "bz2",  text = "[zip]" },
+    { name = "pdf",  text = "[pdf]" },
+    { name = "md",   text = "[txt]" },
+    { name = "txt",  text = "[txt]" },
+    { name = "toml", text = "[txt]" },
+    { name = "json", text = "[txt]" },
+    { name = "yaml", text = "[txt]" },
+    { name = "yml",  text = "[txt]" },
+    { name = "lua",  text = "[lua]" },
+    { name = "py",   text = "[py]" },
+    { name = "js",   text = "[js]" },
+    { name = "ts",   text = "[ts]" },
+    { name = "rs",   text = "[rs]" },
+    { name = "c",    text = "[c]" },
+    { name = "cpp",  text = "[cpp]" },
+    { name = "sh",   text = "[sh]" },
+    { name = "qml",  text = "[qml]" },
+]
+
+conds = [
+    { if = "hidden & dir", text = "[.dir]" },
+    { if = "dir",          text = "[dir]" },
+    { if = "link",         text = "[lnk]" },
+    { if = "exec",         text = "[exe]" },
+    { if = "!(dir | link | exec)", text = "[file]" },
+]

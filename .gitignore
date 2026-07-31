@@ -1,0 +1,12 @@
+zsh/.zsh_history
+
+zsh/.zcompdump*
+
+zen/
+
+discord/
+vesktop/sessionData/
+**/leveldb/
+*.ldb
+*.log
+/home/star/.config/mpv/shaders/cache

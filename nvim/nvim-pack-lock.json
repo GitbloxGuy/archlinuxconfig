@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "9dcb1f3a9164f10c8950a790aace576f2e89dc78",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "5876dd95deeb70aadbe9f1c0b7117a135061cdac",
+      "src": "https://github.com/saghen/blink.lib"
+    }
+  }
+}

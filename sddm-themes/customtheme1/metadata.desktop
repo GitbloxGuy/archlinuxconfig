@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=customtheme1
+Description=Custom theme by star
+Author=star
+Copyright=none
+License=MIT
+Type=sddm
+Version=1.0
+MainScript=Main.qml
+ConfigFile=theme.conf

@@ -1,0 +1,24 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Zen-UK01S3.desktop
+x-scheme-handler/https=userapp-Zen-UK01S3.desktop
+x-scheme-handler/chrome=userapp-Zen-UK01S3.desktop
+text/html=userapp-Zen-UK01S3.desktop
+application/x-extension-htm=userapp-Zen-UK01S3.desktop
+application/x-extension-html=userapp-Zen-UK01S3.desktop
+application/x-extension-shtml=userapp-Zen-UK01S3.desktop
+application/xhtml+xml=userapp-Zen-UK01S3.desktop
+application/x-extension-xhtml=userapp-Zen-UK01S3.desktop
+application/x-extension-xht=userapp-Zen-UK01S3.desktop
+x-scheme-handler/discord=vesktop.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Zen-UK01S3.desktop;
+x-scheme-handler/https=userapp-Zen-UK01S3.desktop;
+x-scheme-handler/chrome=userapp-Zen-UK01S3.desktop;
+text/html=userapp-Zen-UK01S3.desktop;
+application/x-extension-htm=userapp-Zen-UK01S3.desktop;
+application/x-extension-html=userapp-Zen-UK01S3.desktop;
+application/x-extension-shtml=userapp-Zen-UK01S3.desktop;
+application/xhtml+xml=userapp-Zen-UK01S3.desktop;
+application/x-extension-xhtml=userapp-Zen-UK01S3.desktop;
+application/x-extension-xht=userapp-Zen-UK01S3.desktop;
