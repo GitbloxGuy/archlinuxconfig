@@ -21,3 +21,5 @@ starship/cache
 obs-studio/
 
 /home/star/.config/mpv/shaders/cache
+
+pulse/
