@@ -4,6 +4,12 @@ zsh/.zcompdump*
 
 zen/
 
+go/
+
+gtk-3.0/
+
+session/
+
 discord/
 
 starship/cache
