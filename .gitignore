@@ -8,6 +8,10 @@ go/
 
 gtk-3.0/
 
+go/
+
+dconf/
+
 session/
 
 discord/
