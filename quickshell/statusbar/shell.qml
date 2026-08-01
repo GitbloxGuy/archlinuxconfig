@@ -18,7 +18,7 @@ ShellRoot {
         color: "transparent"
         exclusiveZone: 28
 
-        // Workspaces (left)
+        // --- Workspaces (Left) ---
         Row {
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
@@ -45,7 +45,7 @@ ShellRoot {
             }
         }
 
-        // Clock (center)
+        // --- Clock (Center) ---
         Text {
             anchors.centerIn: parent
             color: "#ebdbb2"
@@ -60,8 +60,9 @@ ShellRoot {
             text: Qt.formatDateTime(clock.date, "ddd MMM d  hh:mm:ss AP")
         }
 
-        // Right side: tray, cpu, volume, battery, wifi
+        // --- Right Side Widgets ---
         Row {
+            id: rightRow
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: 10
@@ -71,38 +72,33 @@ ShellRoot {
                 objects: [Pipewire.defaultAudioSink]
             }
 
-            // System tray icons
-            Row {
-                anchors.verticalCenter: parent.verticalCenter
-                spacing: 6
-                Repeater {
-                    model: SystemTray.items
+            // Network Manager GUI Launcher Process
+            Process {
+                id: nmtuiProc
+                command: ["kitty", "--title", "nmtui-float", "-o", "initial_window_width=300", "-o", "initial_window_height=200", "-e", "nmtui"]
+            }
 
-                    Image {
-                        width: 18
-                        height: 18
-                        source: modelData.icon
-                        MouseArea {
-			anchors.fill: parent
-  			onClicked: nmtuiProc.running = true
-			}
-		
-               		Process {
-                        id: nmtuiProc
-                        command: ["kitty", "--title", "nmtui-float", "-o", "initial_window_width=300", "-o", "initial_window_height=200", "-e", "nmtui"]
-                       }
+            // Dedicated WiFi/Network Button
+            Text {
+                color: "#ebdbb2"
+                font.family: "JetBrainsMono Nerd Font"
+                font.pixelSize: 13
+                text: "󰤨 "
 
-                    }
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: nmtuiProc.running = true
                 }
             }
 
-            // CPU
+            // CPU Usage Block
             Text {
                 id: cpuText
                 color: "#ebdbb2"
                 font.family: "JetBrainsMono Nerd Font"
                 font.pixelSize: 13
-                text: "  --%"
+                text: " --%"
 
                 property var lastIdle: 0
                 property var lastTotal: 0
@@ -122,7 +118,7 @@ ShellRoot {
 
                             if (cpuText.lastTotal > 0 && totalDelta > 0) {
                                 var usage = Math.round((1 - idleDelta / totalDelta) * 100);
-                                cpuText.text = "  " + usage + "%";
+                                cpuText.text = " " + usage + "%";
                             }
 
                             cpuText.lastIdle = idle;
@@ -140,39 +136,131 @@ ShellRoot {
                 }
             }
 
-            // Volume
+            // Volume Block
             Text {
                 color: "#ebdbb2"
                 font.family: "JetBrainsMono Nerd Font"
                 font.pixelSize: 13
                 text: {
                     var sink = Pipewire.defaultAudioSink;
-                    if (!sink || !sink.audio) return "   --%";
+                    if (!sink || !sink.audio) return "󰕾 --%";
                     var vol = Math.round(sink.audio.volume * 100);
-                    return sink.audio.muted ? "   Muted" : "   " + vol + "%";
+                    return sink.audio.muted ? "󰝟 " : "󰕾 " + vol + "%";
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    onWheel: (wheel) => {
+                        var sink = Pipewire.defaultAudioSink;
+                        if (!sink || !sink.audio) return;
+                        if (wheel.angleDelta.y > 0) {
+                            sink.audio.volume = Math.min(1.0, sink.audio.volume + 0.05);
+                        } else {
+                            sink.audio.volume = Math.max(0.0, sink.audio.volume - 0.05);
+                        }
+                    }
                 }
             }
 
-            // Battery
+            // Battery Block
             Text {
                 color: "#ebdbb2"
                 font.family: "JetBrainsMono Nerd Font"
                 font.pixelSize: 13
                 text: {
-                    let d = UPower.displayDevice
-                    if (!d) return "   --%"
-                    let prefix = d.charging ? "   " : "   "
-                    return prefix + Math.round(d.percentage * 100) + "%"
+                    let d = UPower.displayDevice;
+                    if (!d) return "󰁹 --%";
+                    let prefix = d.charging ? "󰂄 " : "󰁹 ";
+                    return prefix + Math.round(d.percentage * 100) + "%";
                 }
             }
 
-                   }
-   		 }
+            // --- System Tray Popup Toggle Button ---
+            Text {
+                id: trayToggle
+                color: trayPopup.visible ? "#fabd2f" : "#ebdbb2"
+                font.family: "JetBrainsMono Nerd Font"
+                font.pixelSize: 14
+                text: "󰍜 " // Drawer/Menu Icon
 
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: trayPopup.visible = !trayPopup.visible
+                }
+            }
+        }
+
+        // --- System Tray Popout Menu ---
+        PopupWindow {
+            id: trayPopup
+            anchor.window: bar
+            anchor.rect.x: bar.width - width - 10
+            anchor.rect.y: bar.height + 4
+            visible: false
+	    color: "transparent"
+
+	Connections {
+                target: Hyprland
+                function onFocusedWindowChanged() {
+                    trayPopup.visible = false;
+                }
+            }
+
+            Rectangle {
+                width: trayRow.implicitWidth + 16
+                height: 36
+                color: "#282828"
+                border.color: "#3c3836"
+                border.width: 1
+                radius: 6
+
+                Row {
+                    id: trayRow
+                    anchors.centerIn: parent
+                    spacing: 8
+
+                    // Notice text if no tray icons are running
+                    Text {
+                        visible: SystemTray.items.length === 0
+                        text: "No active applets"
+                        color: "#928374"
+                        font.family: "JetBrainsMono Nerd Font"
+                        font.pixelSize: 11
+                    }
+
+                    Repeater {
+                        model: SystemTray.items
+
+                        Image {
+                            width: 20
+                            height: 20
+                            source: modelData.icon
+
+                            MouseArea {
+                                anchors.fill: parent
+                                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                                onClicked: (mouse) => {
+                                    if (mouse.button === Qt.RightButton) {
+                                        modelData.displayMenu();
+                                    } else {
+                                        modelData.activate();
+				    }
+				trayPopup.visible = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Toggle bar visibility via IPC
     IpcHandler {
         target: "bar"
         function toggle(): void {
-            bar.visible = !bar.visible
+            bar.visible = !bar.visible;
         }
     }
 }

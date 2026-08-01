@@ -1,0 +1,12 @@
+include @sim.resc
+include @/home/username/stm32_arduino/sim.resc
+include @/home/username/stm32_projects/sim.resc
+!!
+include @/home/star/stm32_projects/sim.resc
+mach clear
+mach create "stm32_sim"
+machine LoadPlatformDescription @platforms/cpus/stm32f405.repl
+sysbus LoadELF @.pio/build/nucleo_c031c6/firmware.elf
+clearr
+clear
+include @/home/star/stm32_projects/sim.resc

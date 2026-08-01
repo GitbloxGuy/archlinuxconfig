@@ -1,0 +1,27 @@
+[general]
+terminal = Termsharp
+compiler-cache-enabled = False
+serialization-mode = Generated
+use-synchronous-logging = False
+always-log-machine-name = False
+collapse-repeated-log-entries = True
+log-history-limit = 1000
+history-path = /home/star/.config/renode/history
+store-table-bits = 41
+[monitor]
+consume-exceptions-from-command = True
+break-script-on-exception = True
+number-format = Hexadecimal
+[plugins]
+enabled-plugins = 
+[termsharp]
+append-CR-to-LF = True
+font-face = Roboto Mono
+font-size = 10
+window-width = 700
+window-height = 400
+window-initial-offset-x = 0
+window-initial-offset-y = 0
+window-next-offset-x = 30
+window-next-offset-y = 50
+window-allow-outside-viewport = False
