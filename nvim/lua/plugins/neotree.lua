@@ -12,6 +12,23 @@ return {
     { "<leader>ge", "<cmd>Neotree toggle git_status left<cr>", desc = "Toggle Neo-tree (Git Status)" },
   },
   opts = {
+  -- ADDED: Custom Git status component configuration
+    default_component_configs = {
+      git_status = {
+        symbols = {
+          -- Swap these characters out to match your minimal style
+          added     = "✚",
+          modified  = "", -- Minimal dot
+          deleted   = "✖",
+          renamed   = "  ",
+          untracked = "",
+          ignored   = "",
+          unstaged  = "  ",
+          staged    = "",
+          conflict  = "",
+        },
+      },
+    },
     filesystem = {
       filtered_items = {
         visible = true,
@@ -31,6 +48,8 @@ return {
     },
   },
   config = function(_, opts)
+ vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { fg = "#edece8", italic = true }) -- Minimal Cyan/Blue
+
     require("neo-tree").setup(opts)
   end,
 }

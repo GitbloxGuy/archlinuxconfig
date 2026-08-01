@@ -25,3 +25,8 @@ window-initial-offset-y = 0
 window-next-offset-x = 30
 window-next-offset-y = 50
 window-allow-outside-viewport = False
+[translation]
+min-tb-size = 33554432
+max-tb-size = 536870912
+[file-fetcher]
+calculate-checksum = True

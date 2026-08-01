@@ -10,3 +10,32 @@ sysbus LoadELF @.pio/build/nucleo_c031c6/firmware.elf
 clearr
 clear
 include @/home/star/stm32_projects/sim.resc
+i $CWD/board.resc
+d
+start @scripts/single-node/stm32f4_discovery.resc
+d
+machine StartGdbServer 3333
+d
+clearr
+clear
+renode --console --disable-gui
+start @scripts/single-node/stm32f4_discovery.rescmachine StartGdbServer 3333
+exit
+start @scripts/single-node/stm32f4_discovery.resc
+machine StartgdbServer 333
+machine StartGdbServer 3333
+start @scripts/single-node/stm32f4_discovery.resc
+(monitor) mach create
+mach create
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery.repl
+sysbus LoadELF @
+sysbus LoadELF @https://antmicro.com
+sysbus LoadELF @tests/platforms/ARM_Cortex-M4.elf
+start @scripts/single-node/stm32f4_discovery.resc
+i $CWD/run.resc
+pause
+start
+cpu GetCUrrentProgramCounter
+cpu GetCurrentProgramCounter
+sysbus.cpu PC
+i $CWD/run.resc

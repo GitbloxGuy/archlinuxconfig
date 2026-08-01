@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<!--Twitter Card Metadata-->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="We make tech happen" />
+		<meta name="twitter:site" content="@antmicro" />
+		<meta name="twitter:url" content="" />
+
+		<!--Open Graph Metadata-->
+		<meta property="og:title" content="We make tech happen" />
+		<meta property="og:url" content="" />
+
+		<!-- Use title if it's in the page YAML frontmatter -->
+		<title>Antmicro · We make tech happen</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,900|PT+Mono&amp;subset=latin-ext" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/css/asciinema-player.min.css" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" "" href="/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5" "">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link href="/stylesheets/site-ef466fce.css" rel="stylesheet" />
+		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.0/lunr.min.js"></script>
+		<script src="/javascripts/jquery-3.1.0.min-291d8740.js"></script>
+		<script src="/javascripts/jquery-caret-efffc64d.js"></script>
+		<script src="/javascripts/jquery.fittext-6acb98e9.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vivus@0.4.3/dist/vivus.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/js/asciinema-player.min.js"></script>
+		<script src="/javascripts/denizen-3e93bbcf.js"></script>
+
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				},
+				i[r].l = 1 * new Date();
+				a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-29966493-1', 'auto');
+			ga('send', 'pageview');
+
+			function search(form) {
+
+			  if (!$('.search-input-small').val() && !$('.search-input-large').val())
+			    return;
+			  var value = form === 'small'
+			    ? $('.search-input-small').val()
+			    : $('.search-input-large').val()
+
+			  sessionStorage.clear();
+			  sessionStorage.setItem('keyword', value)
+			  window.location = '/blog/search'
+			}
+		</script>
+
+		<script src="https://use.typekit.net/dla7wjv.js"></script>
+		<script>
+			try {
+				Typekit.load({async: false});
+			} catch (e) {}
+		</script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M8XSRLN2P"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-2M8XSRLN2P');
+        </script>
+
+		</head>
+
+        
+
+	<body class="index  ">
+		<nav id="menu">
+  <div class="container no-gutters">
+    <div class="row mainmenu">
+      <div>
+        <a href="/" class="logo"> </a>
+      </div>
+      <div class="rightbar hidden-only-sm hidden-only-xs">
+        <ul class="nav-list">
+          <li class="closebutton hidden-only-md hidden-only-lg"><img src="/images/nav_close.svg" />Close</li>
+          <li class="hidden-only-xs hidden-only-sm active">
+<a href="/" id="home-link">            <svg width="20" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L0 12h3v9h5v-6h4v6h5v-9h3L10 3zm0 1.345L17.394 11H17a1 1 0 0 0-1 1v8h-3v-5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v5H4v-8a1 1 0 0 0-1-1h-.394L10 4.345z" fill="#000" fill-rule="evenodd"/></svg>
+</a>          </li>
+
+          <li class="nav-areas">
+            <h5 class="dropdown-toggle">Areas</h5>
+            <svg class="menuArr" width="6" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h6L3 3z" fill="#000" fill-rule="evenodd"/></svg>
+            <ul class="hover-menu">
+              <li><a href="/areas/robotics-and-drones" class="nav_link">Robotics & Drones</a></li>
+              <li><a href="/areas/industry-and-transportation" class="nav_link">Industry & Trans&shy;porta&shy;tion</a></li>
+              <li><a href="/areas/security-and-access-control" class="nav_link">Security & Access Control</a></li>
+              <li><a href="/areas/lab-and-measurement" class="nav_link">Lab & Measure&shy;ment</a></li>
+              <li><a href="/areas/defense-and-aerospace" class="nav_link">Defense & Aero&shy;space</a></li>
+            </ul>
+          </li>
+          <li class="nav-technologies">
+            <h5 class="dropdown-toggle">Technologies</h5>
+            <svg class="menuArr" width="6" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h6L3 3z" fill="#000" fill-rule="evenodd"/></svg>
+            <ul class="hover-menu">
+              <li><a href="/technologies/fpga" class="nav_link">FPGA</a></li>
+              <li><a href="/technologies/cpu-gpu" class="nav_link">Hetero&shy;geneous CPU/GPU systems</a></li>
+              <li><a href="/technologies/risc-v" class="nav_link">RISC-V</a></li>
+              <li><a href="/technologies/iot" class="nav_link">Internet of Things</a></li>
+              <li><a href="/technologies/hmi" class="nav_link">Human-Machine Inter&shy;faces</a></li>
+              <li><a href="/technologies/vision-systems" class="nav_link">Vision Systems</a></li>
+            </ul>
+          </li>
+          <li class="nav-services">
+            <h5 class="dropdown-toggle">Services</h5>
+            <svg class="menuArr" width="6" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h6L3 3z" fill="#000" fill-rule="evenodd"/></svg>
+            <ul class="hover-menu">
+              <li><a href="/services/software-and-bsps" class="nav_link">Soft&shy;ware & BSPs</a></li>
+              <li><a href="/services/cloud" class="nav_link">Cloud</a></li>
+              <li><a href="/services/product-development" class="nav_link">Product Develop&shy;ment</a></li>
+              <li><a href="/services/hardware-design" class="nav_link">Hard&shy;ware Design</a></li>
+              <li><a href="/services/edge-ai" class="nav_link">Edge AI</a></li>
+            </ul>
+          </li>
+          <li class="nav-platforms">
+            <h5 class="dropdown-toggle">Platforms</h5>
+            <svg class="menuArr" width="6" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h6L3 3z" fill="#000" fill-rule="evenodd"/></svg>
+            <ul class="hover-menu">
+              <li><a href="/nvidia-jetson/" class="nav_link">NVIDIA® Jetson™ services</a></li>
+              <li><a href="/platforms/ultrascale-processing-module" class="nav_link">Ultra&shy;Scale+ Pro&shy;cess&shy;ing Module</a></li>
+              <li><a href="/platforms/custom-camera-platforms" class="nav_link">Custom Camera Platforms</a></li>
+              <li><a href="/platforms/memory-testing-platforms" class="nav_link">Memory testing platforms</a></li>
+              <li><a href="/platforms/dc-scm-open-source-bmc-platforms" class="nav_link">DC-SCM-compatible open source BMC</a></li>
+              <li><a href="/platforms/industrial-android" class="nav_link">Industrial Android</a></li>
+              <li><a href="/platforms/renode" class="nav_link">Renode</a></li>
+              <li><a href="/kenning/" class="nav_link">Kenning</a></li>
+            </ul>
+          </li>
+          <li class="nav-blog">
+              <a href="/blog/" class="hidden-only-sm hidden-only-xs">
+                <h5>Blog</h5>
+              </a>
+              <a href="/blog/" class="dropdown-toggle dropdown-toggle-blog hidden-only-md hidden-only-lg">
+                <h5>Blog</h5>
+              </a>
+          </li>
+          <li class="nav-about">
+            <h5 class="dropdown-toggle">About</h5>
+            <svg class="menuArr" width="6" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h6L3 3z" fill="#000" fill-rule="evenodd"/></svg>
+            <ul class="hover-menu">
+              <li><a href="/about/contact" class="nav_link">Contact</a></li>
+              <li><a href="/about/partners" class="nav_link">Partners</a></li>
+              <li><a href="/about/resources" class="nav_link">Resources</a></li>
+              <li><a href="/about/company" class="nav_link">The Company</a></li>
+              <li><a href="/about/careers" class="nav_link">Careers</a></li>
+            </ul>
+          </li>
+
+          <li class="hidden-only-xs hidden-only-sm sep"></li>
+
+          <li class="hidden-only-xs hidden-only-sm">
+<a href="https://opensource.antmicro.com/" id="open-link">              <svg width="18" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 13h2v-2H6v2zm4 5h7V6h-7v12zM9 5v15.656l-8-2.4V5.744l8-2.4V5zm1 0V2L0 5v14l10 3v-3h8V5h-8z" fill="#000" fill-rule="evenodd"/></svg>
+              <span style="vertical-align:top;">&nbsp; Open Source</span>
+</a>          </li>
+          
+          <li class="hidden-only-md hidden-only-lg">
+            <a href="https://opensource.antmicro.com/">
+              <h5 class="dropdown-toggle">Open Source Portal</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden-only-lg hidden-only-md hamburger"><div></div><h6>Menu</h6></div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid" style="background-size: cover;background-position: center, center;background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.776) 0%, rgba(0, 0, 0, 0.32) 100%), url(/images/01-01-start-hero.jpg);
+">
+  <div class="container no-gutters herocontainer">
+    <div class="herobox col12-lg-7 col20-sm-10 col20-xs-18 invert">
+      <h1>We make tech happen</h1>
+      <div class="hidden-only-xs hidden-only-sm callout-font" style="margin-top: 18px">Antmicro provides engineering services, open source tools, platforms and strategic R&D for high-tech products.</div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid no-gutters icon-nav hidden-only-xs fullwidth">
+  <div class="row">
+<a href="/areas/robotics-and-drones/" class="block col20-xs-20 col20-sm-4">          <div class="icon">
+            <svg id="robotics-icon" viewBox="0 0 124 104" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-19, -16) scale(1.3)" fill="none" fill-rule="evenodd"><path d="M76 29c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM54.222 36.778c-4.29-4.289-4.29-11.268 0-15.557M69.778 21.222c4.29 4.289 4.29 11.268 0 15.557M56.343 34.657c-3.12-3.119-3.12-8.195 0-11.314M67.657 23.343c3.12 3.119 3.12 8.195 0 11.314M76 77c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM54.222 84.778c-4.29-4.289-4.29-11.268 0-15.557M69.778 69.222c4.29 4.289 4.29 11.268 0 15.557M56.343 82.657c-3.12-3.119-3.12-8.195 0-11.314M67.657 71.343c3.12 3.119 3.12 8.195 0 11.314M52 53c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM49 53c0 6.065-4.935 11-11 11M27 53c0-6.065 4.935-11 11-11M46 53c0 4.411-3.589 8-8 8M30 53c0-4.411 3.589-8 8-8M100 53c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM75 53c0-6.065 4.935-11 11-11M97 53c0 6.065-4.935 11-11 11M78 53c0-4.411 3.589-8 8-8M94 53c0 4.411-3.589 8-8 8" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 30.5V32c0 11.598-9.402 21-21 21h-1.5H41c11.598 0 21 9.402 21 21v3l-1-1h2l-1 1v-3c0-11.598 9.402-21 21-21h3l-1 1v-2l1 1h-3c-11.598 0-21-9.402-21-21v-1.5z" stroke="#303030" stroke-width="2"/><circle stroke="#303030" stroke-width="3" cx="62" cy="29" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="38" cy="53" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="86" cy="53" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="62" cy="77" r="1.5"/></g></svg>
+
+            <svg id="robotics-hover" class="hover-icon" viewBox="0 0 124 104" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-19, -16) scale(1.3)" fill="none" fill-rule="evenodd"><path d="M62 30.5V32c0 11.598-9.402 21-21 21h-1.5H41c11.598 0 21 9.402 21 21v3l-1-1h2l-1 1v-3c0-11.598 9.402-21 21-21h3l-1 1v-2l1 1h-3c-11.598 0-21-9.402-21-21v-1.5z" stroke="#303030" stroke-width="2"/><circle stroke="#303030" stroke-width="3" cx="62" cy="29" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="38" cy="53" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="86" cy="53" r="1.5"/><circle stroke="#303030" stroke-width="3" cx="62" cy="77" r="1.5"/><path d="M76 29c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM54.222 36.778c-4.29-4.289-4.29-11.268 0-15.557M69.778 21.222c4.29 4.289 4.29 11.268 0 15.557M56.343 34.657c-3.12-3.119-3.12-8.195 0-11.314M67.657 23.343c3.12 3.119 3.12 8.195 0 11.314M76 77c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM54.222 84.778c-4.29-4.289-4.29-11.268 0-15.557M69.778 69.222c4.29 4.289 4.29 11.268 0 15.557M56.343 82.657c-3.12-3.119-3.12-8.195 0-11.314M67.657 71.343c3.12 3.119 3.12 8.195 0 11.314M52 53c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM49 53c0 6.065-4.935 11-11 11M27 53c0-6.065 4.935-11 11-11M46 53c0 4.411-3.589 8-8 8M30 53c0-4.411 3.589-8 8-8M100 53c0 7.732-6.268 14-14 14s-14-6.268-14-14 6.268-14 14-14 14 6.268 14 14zM75 53c0-6.065 4.935-11 11-11M97 53c0 6.065-4.935 11-11 11M78 53c0-4.411 3.589-8 8-8M94 53c0 4.411-3.589 8-8 8" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+
+          </div>
+        <h3 style="text-transform: uppercase">Robotics</h3><h4>& Drones</h4>
+</a><a href="/areas/industry-and-transportation/" class="block col20-xs-20 col20-sm-4">          <div class="icon">
+            <svg id="industry-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{stroke-linecap:round;stroke-linejoin:round}.st0,.st1{fill:none;stroke:#303030;stroke-width:2;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.28)"><path class="st0" d="M79 90H45a1.5 1.5 0 1 0 0 3h34a1.5 1.5 0 1 0 0-3zM71 60H53a4 4 0 0 0-4 4v26h26V64a4 4 0 0 0-4-4z"/><path class="st0" d="M57 71h18v8H57z"/><circle class="st0" cx="42" cy="40" r="9"/><circle class="st0" cx="42" cy="21" r="5"/><path class="st0" d="M83 21a5 5 0 1 1-5-5 5 5 0 0 1 5 5zM42 16h36M78 26H42M47 26l3 10M37 21l-4 19"/><path class="st1" d="M35 46l15 15M51 40l10 20"/><circle class="st0" cx="87" cy="33" r="6"/><path class="st0" d="M83.016 37.478L79 43l10 10 8-2M108 43v-7L98 26l-6.215 3.39M74 24l9 13M83 19l9 10"/></g></svg>
+
+            <svg id="industry-hover" class="hover-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{stroke-linecap:round;stroke-linejoin:round}.st0,.st1{fill:none;stroke:#303030;stroke-width:2;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.28)"><path class="st0" d="M79 90H45a1.5 1.5 0 1 0 0 3h34a1.5 1.5 0 1 0 0-3zM71 60H53a4 4 0 0 0-4 4v26h26V64a4 4 0 0 0-4-4z"/><path class="st0" d="M57 71h18v8H57z"/><circle class="st0" cx="42" cy="40" r="9"/><circle class="st0" cx="42" cy="21" r="5"/><path class="st0" d="M83 21a5 5 0 1 1-5-5 5 5 0 0 1 5 5zM42 16h36M78 26H42M47 26l3 10M37 21l-4 19"/><path class="st1" d="M35 46l15 15M51 40l10 20"/><circle class="st0" cx="87" cy="33" r="6"/><path class="st0" d="M83.016 37.478L79 43l10 10 8-2M108 43v-7L98 26l-6.215 3.39M74 24l9 13M83 19l9 10"/></g></svg>
+
+          </div>
+        <h3 style="text-transform: uppercase">Industry</h3><h4>& Trans&shy;porta&shy;tion</h4>
+</a><a href="/areas/security-and-access-control/" class="block col20-xs-20 col20-sm-4">          <div class="icon">
+            <svg id="security-icon" class="areas-icon security-icon" data-file="areas_security.svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{fill:none;stroke:#303030;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path class="st0" d="M92 61.888c6.57-9.219 8.08-21.504 3-31-7.579-14.167-27.476-17.839-44-9M48 88.888c14.059 0 28.008-7.743 41-23"/><path class="st0" d="M73 22.888c7.256.84 13.495 4.823 16.71 10.83 3.846 7.19 3.022 17.844-2.71 25.17-7.109 9.086-20.875 24-39 24s-16-23-16-23"/><path class="st0" d="M37 62.888c-.255 1.688 1.515 8.748 3.927 11.554.52.605 2.104 2.446 7.073 2.446 1.992 0 4.993-.537 7-1M64 71.888c6.112-3.691 12.258-9.345 18.389-17.18 3.038-3.883 4.273-9.162 3.483-13.82M61 66.888s-2.375 3-11 3-7.7-9.49-7-13c.024-.119 2.928-11.328 10-17 2.065-1.656 5.125-4.125 10-5M80 39.888c-1.221-2.283-5.486-4.627-9-5"/><path class="st0" d="M85 36.888c-2.144-4.007-7.53-6.856-13-8-6.63-1.386-12.667-.916-22 6s-12 21-12 21"/><path class="st0" d="M64 22.888c-4.763.58-10.816 2.417-17 7-11.092 8.22-14.874 24.331-15 25M72.604 40.605c4.934 5.354 3.076 14.541-4.415 21.848M64 58.888c4.875-4.754 7.57-11.21 5-14-2.655-2.88-9.765-1.824-15 3-5.235 4.825-7.655 11.12-5 14 1.256 1.364 3.344 2.907 7 1M60 55.888c2.687-1.916 2.878-5.047 2-6"/><path class="st0" d="M41 88.888s-13.5-2.25-14-26 14-35 14-35"/></g></svg>
+
+            <svg id="security-hover" class="hover-icon" data-file="areas_security.svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{fill:none;stroke:#303030;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path class="st0" d="M92 61.888c6.57-9.219 8.08-21.504 3-31-7.579-14.167-27.476-17.839-44-9m-3 67c14.059 0 28.008-7.743 41-23"/><path class="st0" d="M73 22.888c7.256.84 13.495 4.823 16.71 10.83 3.846 7.19 3.022 17.844-2.71 25.17-7.109 9.086-20.875 24-39 24s-16-23-16-23"/><path class="st0" d="M37 62.888c-.255 1.688 1.515 8.748 3.927 11.554.52.605 2.104 2.446 7.073 2.446 1.992 0 4.993-.537 7-1m9-4c6.112-3.691 12.258-9.345 18.389-17.18 3.038-3.883 4.273-9.162 3.483-13.82M61 66.888s-2.375 3-11 3-7.7-9.49-7-13c.024-.119 2.928-11.328 10-17 2.065-1.656 5.125-4.125 10-5m17 5c-1.221-2.283-5.486-4.627-9-5"/><path class="st0" d="M85 36.888c-2.144-4.007-7.53-6.856-13-8-6.63-1.386-12.667-.916-22 6s-12 21-12 21"/><path class="st0" d="M64 22.888c-4.763.58-10.816 2.417-17 7-11.092 8.22-14.874 24.331-15 25m40.604-14.283c4.934 5.354 3.076 14.541-4.415 21.848M64 58.888c4.875-4.754 7.57-11.21 5-14-2.655-2.88-9.765-1.824-15 3-5.235 4.825-7.655 11.12-5 14 1.256 1.364 3.344 2.907 7 1m4-7c2.687-1.916 2.878-5.047 2-6"/><path class="st0" d="M41 88.888s-13.5-2.25-14-26 14-35 14-35"/></g></svg>
+
+          </div>
+        <h3 style="text-transform: uppercase">Security</h3><h4>& Access Control</h4>
+</a><a href="/areas/lab-and-measurement/" class="block col20-xs-20 col20-sm-4">          <div class="icon">
+            <svg id="lab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{stroke-linecap:round;stroke-linejoin:round}.st0,.st1{fill:none;stroke:#303030;stroke-width:2;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path class="st0" d="M35.077 75h55.846C93.727 75 96 76.79 96 79v8c0 2.21-2.273 4-5.077 4H35.077C32.273 91 30 89.21 30 87v-8c0-2.21 2.273-4 5.077-4zM66 70h30M82.102 53.213L71.378 58.6a2 2 0 0 0 1.795 3.575l10.724-5.386a2 2 0 0 0-1.795-3.575z"/><path class="st0" d="M69.779 32.852l-7.15 3.59a2 2 0 0 0-.889 2.685l8.943 17.807a2 2 0 0 0 2.685.89l7.15-3.59a2 2 0 0 0 .889-2.685L72.464 33.74a2 2 0 0 0-2.685-.89zM63.858 21.062l-7.149 3.59a2 2 0 0 1-2.685-.89l-2.219-4.417a2 2 0 0 1 .89-2.685l7.15-3.59a2 2 0 0 1 2.684.89l2.219 4.417a2 2 0 0 1-.89 2.685z"/><path class="st0" d="M62.071 21.96l-3.575 1.795a2 2 0 0 0-.89 2.685l4.126 8.215a2 2 0 0 0 2.685.89l3.575-1.796a2 2 0 0 0 .89-2.685l-4.126-8.214a2 2 0 0 0-2.685-.89zM81 70v5M37 83h26M84 83h5M71 83h5"/><circle class="st0" cx="44" cy="58" r="8"/><path class="st1" d="M59.037 28.859C42.26 32.289 32 43.833 32 58c0 6.168 2.467 12.111 6.443 17h18.504c-3.606-2.816-6.497-6.452-8.215-10.56M47.671 50.897C49.505 44.041 54.955 38.53 62 35"/><circle class="st0" cx="44" cy="58" r="4"/></g></svg>
+
+            <svg id="lab-hover" class="hover-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{stroke-linecap:round;stroke-linejoin:round}.st0,.st1{fill:none;stroke:#303030;stroke-width:2;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path class="st0" d="M35.077 75h55.846C93.727 75 96 76.79 96 79v8c0 2.21-2.273 4-5.077 4H35.077C32.273 91 30 89.21 30 87v-8c0-2.21 2.273-4 5.077-4zM66 70h30M82.102 53.213L71.378 58.6a2 2 0 0 0 1.795 3.575l10.724-5.386a2 2 0 0 0-1.795-3.575z"/><path class="st0" d="M69.779 32.852l-7.15 3.59a2 2 0 0 0-.889 2.685l8.943 17.807a2 2 0 0 0 2.685.89l7.15-3.59a2 2 0 0 0 .889-2.685L72.464 33.74a2 2 0 0 0-2.685-.89zM63.858 21.062l-7.149 3.59a2 2 0 0 1-2.685-.89l-2.219-4.417a2 2 0 0 1 .89-2.685l7.15-3.59a2 2 0 0 1 2.684.89l2.219 4.417a2 2 0 0 1-.89 2.685z"/><path class="st0" d="M62.071 21.96l-3.575 1.795a2 2 0 0 0-.89 2.685l4.126 8.215a2 2 0 0 0 2.685.89l3.575-1.796a2 2 0 0 0 .89-2.685l-4.126-8.214a2 2 0 0 0-2.685-.89zM81 70v5M37 83h26M84 83h5M71 83h5"/><circle class="st0" cx="44" cy="58" r="8"/><path class="st1" d="M59.037 28.859C42.26 32.289 32 43.833 32 58c0 6.168 2.467 12.111 6.443 17h18.504c-3.606-2.816-6.497-6.452-8.215-10.56M47.671 50.897C49.505 44.041 54.955 38.53 62 35"/><circle class="st0" cx="44" cy="58" r="4"/></g></svg>
+
+          </div>
+        <h3 style="text-transform: uppercase">Lab</h3><h4>& Measure&shy;ment</h4>
+</a><a href="/areas/defense-and-aerospace/" class="block col20-xs-20 col20-sm-4">          <div class="icon">
+            <svg id="defence-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{fill:none;stroke:#303030;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path transform="rotate(-44.987 42 72)" class="st0" d="M25.737 61.39h32.527v21.221H25.737z"/><path class="st0" d="M76.996 58l-10.002 9.998L48.004 49 46 46.997 56.003 37zM43.499 31.497l-3.002 3.004 8.142 8.14.859.859 3.001-3.004zM48.995 26.001l-14 13.998-5.421-5.43-.572-.573L43 19.998z"/><path class="st0" d="M28.997 33.996C25.133 30.13 25.135 23.864 29 20c3.867-3.866 10.135-3.864 14 .003M75.497 59.499l-7 7.001 2.716 2.712.286.286 7.001-7.001zM34 80l16-16M32 72l2 2M40 80l2 2M37 67l2 2M45 75l2 2M42 62l2 2M50 70l2 2"/><path transform="rotate(-44.987 81 33)" class="st0" d="M64.737 22.39h32.527v21.221H64.737z"/><path class="st0" d="M73 41l16-16M71 33l2 2M79 41l2 2M76 28l2 2M84 36l2 2M81 23l2 2M89 31l2 2M59 40l-9.999 9.999M56 51l7 7M60 47l7 7M49 55l2-2M52 58l2-2M59 65l2-2M56 62l2-2M62 42l2-2M65 45l2-2M72 52l2-2M69 49l2-2M75.1 85.9c-5.467-5.468-5.467-14.332 0-19.8 5.468-5.467 14.332-5.467 19.8 0L75.1 85.9zM90.763 71a7.636 7.636 0 0 1-10.799 10.799"/></g></svg>
+
+            <svg id="defence-hover" class="hover-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 104"><style>.st0{fill:none;stroke:#303030;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g transform="translate(-19, -16) scale(1.3)"><path transform="rotate(-44.987 42 72)" class="st0" d="M25.737 61.39h32.527v21.221H25.737z"/><path class="st0" d="M76.996 58l-10.002 9.998L48.004 49 46 46.997 56.003 37zM43.499 31.497l-3.002 3.004 8.142 8.14.859.859 3.001-3.004zM48.995 26.001l-14 13.998-5.421-5.43-.572-.573L43 19.998z"/><path class="st0" d="M28.997 33.996C25.133 30.13 25.135 23.864 29 20c3.867-3.866 10.135-3.864 14 .003M75.497 59.499l-7 7.001 2.716 2.712.286.286 7.001-7.001zM34 80l16-16M32 72l2 2M40 80l2 2M37 67l2 2M45 75l2 2M42 62l2 2M50 70l2 2"/><path transform="rotate(-44.987 81 33)" class="st0" d="M64.737 22.39h32.527v21.221H64.737z"/><path class="st0" d="M73 41l16-16M71 33l2 2M79 41l2 2M76 28l2 2M84 36l2 2M81 23l2 2M89 31l2 2M59 40l-9.999 9.999M56 51l7 7M60 47l7 7M49 55l2-2M52 58l2-2M59 65l2-2M56 62l2-2M62 42l2-2M65 45l2-2M72 52l2-2M69 49l2-2M75.1 85.9c-5.467-5.468-5.467-14.332 0-19.8 5.468-5.467 14.332-5.467 19.8 0L75.1 85.9zM90.763 71a7.636 7.636 0 0 1-10.799 10.799"/></g></svg>
+
+          </div>
+        <h3 style="text-transform: uppercase">Defense</h3><h4>& Aero&shy;space</h4>
+</a>  </div>
+</div>
+
+
+<div class="container no-gutters">
+  <div class="content">
+    <div class="row h500 vh-xs">
+  <div class="col12-sm-6 hidden-only-xs ph-1 align-top pv80" style="line-height: 500px; padding-right: 0 !important">
+    <img src="/images/DAC-BoF--featured.png" alt="Dac bof  featured" />
+  </div>
+  <div class="col12-xs-12 visible-only-xs ph-1 align-top pv80" style="padding-bottom: 0 !important">
+    <img src="/images/DAC-BoF--featured.png" alt="Dac bof  featured" />
+    <div class="spacer80"></div>
+  </div>
+  <div class="col12-sm-6 col12-xs-12 text-left hidden-only-xs">
+    <div class="ph-1 pv80 vcenter">
+      <h2>Antmicro at DAC 2026</h2>
+      <h4>Join us at the Open-Source EDA Birds-of-a-Feather DAC Conference session to learn about the latest developments in CHIPS Alliance.</h4>
+      <a class='btn more-btn external' href='https://open-source-eda-birds-of-a-feather.github.io/'><span class='more-text'>LEARN MORE</span><span class='more-icon'><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_next" fill="#000000">
+            <polygon id="icon" points="75.0006 24 70.4826 28.428 102.4746 60 12.0006 60 12.0006 66 102.4746 66 70.4826 97.572 74.9106 102 114.0006 63"></polygon>
+        </g>
+    </g>
+</svg>
+</span></a>
+    </div>
+  </div>
+  <div class="col12-sm-6 col12-xs-12 text-left visible-only-xs">
+    <div class="ph-1 pv80 vcenter" style="padding-top: 20px !important">
+      <h2>Antmicro at DAC 2026</h2>
+      <h4>Join us at the Open-Source EDA Birds-of-a-Feather DAC Conference session to learn about the latest developments in CHIPS Alliance.</h4>
+      <a class='btn more-btn external' href='https://open-source-eda-birds-of-a-feather.github.io/'><span class='more-text'>LEARN MORE</span><span class='more-icon'><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_next" fill="#000000">
+            <polygon id="icon" points="75.0006 24 70.4826 28.428 102.4746 60 12.0006 60 12.0006 66 102.4746 66 70.4826 97.572 74.9106 102 114.0006 63"></polygon>
+        </g>
+    </g>
+</svg>
+</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="row h500 vh-xs lightgray">
+    <div class="col12-xs-12 visible-only-xs ph-1 align-top pv80" style="padding-bottom: 0 !important">
+    <img src="/images/JOB-purchase-featured.png" alt="Job purchase featured" />
+    <div class="spacer80"></div>
+  </div>
+  <div class="col12-sm-6 col12-xs-12 text-left hidden-only-xs">
+    <div class="ph-1 pv80 vcenter">
+    <h2> Buy Antmicro Baseboard for Jetson Orin</h2>
+    <h4>Our open hardware Antmicro Baseboard for NVIDIA Jetson Orin is now available for purchase directly from our System Designer portal.</h4>
+      <a class='btn more-btn external' href='https://antmicro.com/blog/2026/06/antmicro-baseboard-for-jetson-orin-on-system-designer'><span class='more-text'>READ MORE</span><span class='more-icon'><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_next" fill="#000000">
+            <polygon id="icon" points="75.0006 24 70.4826 28.428 102.4746 60 12.0006 60 12.0006 66 102.4746 66 70.4826 97.572 74.9106 102 114.0006 63"></polygon>
+        </g>
+    </g>
+</svg>
+</span></a>
+    </div>
+  </div>
+  <div class="col12-sm-6 col12-xs-12 text-left visible-only-xs">
+    <div class="ph-1 pv80 vcenter" style="padding-top: 20px !important">
+      <h2> Buy Antmicro Baseboard for Jetson Orin</h2>
+      <h4>Our open hardware Antmicro Baseboard for NVIDIA Jetson Orin is now available for purchase directly from our System Designer portal.</h4>
+      <a class='btn more-btn external' href='https://antmicro.com/blog/2026/06/antmicro-baseboard-for-jetson-orin-on-system-designer'><span class='more-text'>READ MORE</span><span class='more-icon'><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_next" fill="#000000">
+            <polygon id="icon" points="75.0006 24 70.4826 28.428 102.4746 60 12.0006 60 12.0006 66 102.4746 66 70.4826 97.572 74.9106 102 114.0006 63"></polygon>
+        </g>
+    </g>
+</svg>
+</span></a>
+    </div>
+  </div>
+  <div class="col12-sm-6 hidden-only-xs ph-1 align-top pv80">
+    <img src="/images/JOB-purchase-featured.png" alt="Job purchase featured" />
+  </div>
+</div>
+
+
+
+<div id="tech-showcase" class="pv80 ph-2 white">
+  <h1>TECH&shy;NOLOGY SHOW&shy;CASE:</h1>
+</div>
+
+<div class="row boxes showcase text-left" id="tech-showcase-grid" data-api="/blog/api/posts.json" ">
+  <div class="showcase__status">
+    Loading technology highlights...
+  </div>
+</div>
+
+<div class="row lightgray">
+  <div class="col12-xs-12">
+    <div class="pv80">
+      <h2>OUR SERVICES:</h2>
+      <div class="row service-icons icons-draw">
+<a href="/services/software-and-bsps/" class="block service-icon">            <svg id="bsp-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 130"><style>.st2,.st3{fill:none;stroke:#332d37;stroke-width:2;stroke-miterlimit:10}.st3{stroke-linecap:round;stroke-linejoin:round}</style><g transform="translate(-12, -6) scale(1.1)"><path class="st3" d="M46 73V18a6 6 0 0 1 6-6h124a6 6 0 0 1 6 6v55M46 26h136"/><circle class="st3" cx="53" cy="19" r="3"/><circle class="st3" cx="63" cy="19" r="3"/><circle class="st3" cx="73" cy="19" r="3"/><circle class="st2" cx="55" cy="35" r="5"/><circle class="st2" cx="95" cy="35" r="5"/><path class="st2" d="M60 35h31"/><circle class="st2" cx="122" cy="88" r="5"/><circle class="st2" cx="133" cy="35" r="5"/><circle class="st2" cx="173" cy="35" r="5"/><path class="st2" d="M138 35h31"/><circle class="st2" cx="55" cy="62" r="5"/><circle class="st2" cx="55" cy="88" r="5"/><circle class="st2" cx="77" cy="81" r="5"/><circle class="st2" cx="78" cy="62" r="5"/><circle class="st2" cx="67" cy="44" r="5"/><circle class="st2" cx="146" cy="44" r="5"/><path class="st2" d="M72 44h69"/><circle class="st2" cx="112" cy="53" r="5"/><circle class="st2" cx="173" cy="53" r="5"/><circle class="st2" cx="100" cy="62" r="5"/><circle class="st2" cx="167" cy="80" r="5"/><circle class="st2" cx="173" cy="97" r="5"/><circle class="st2" cx="132" cy="99" r="5"/><circle class="st2" cx="80" cy="111" r="5"/><path class="st2" d="M117 53h51M105 62h29M50 44h9M134 83h9M77 53h24M157 97h12M93 88h24"/><g opacity=".3"><circle class="st2" cx="66" cy="97" r="5"/><circle class="st2" cx="94" cy="97" r="5"/><path class="st2" d="M71 97h19"/><circle class="st2" cx="141" cy="110" r="5"/><circle class="st2" cx="163" cy="110" r="5"/><path class="st2" d="M146 110h12"/><circle class="st2" cx="89" cy="71" r="5"/><circle class="st2" cx="149" cy="71" r="5"/><path class="st2" d="M94 71h51"/><circle class="st2" cx="63" cy="75" r="5"/><circle class="st2" cx="161" cy="62" r="5"/><circle class="st2" cx="111" cy="108" r="5"/><path class="st2" d="M140 90h21"/></g></g></svg>
+
+            <h4>Soft&shy;ware & BSPs</h4>
+</a><a href="/services/cloud/" class="block service-icon">            <svg id="cloud-svg" viewBox="-19 0 225 130">
+  <g fill="none" fill-rule="evenodd" stroke="#332D37" stroke-width="2">
+    <path d="M73 80c0 12.15-9.85 22-22 22s-22-9.85-22-22 9.85-22 22-22 22 9.85 22 22z"/>
+    <path d="M51 88c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM159 86.5c0 8.561-6.939 15.5-15.5 15.5S128 95.061 128 86.5 134.939 71 143.5 71 159 77.939 159 86.5z"/>
+    <path d="M154 86.5c0 5.799-4.701 10.5-10.5 10.5S133 92.299 133 86.5 137.701 76 143.5 76 154 80.701 154 86.5z"/>
+    <path d="M149.321 51.256C143.171 26.416 120.741 8 94.001 8 72.706 8 54.152 19.685 44.366 36.984 24.28 40.372 9 57.954 9 79.09c0 23.584 19.054 42.75 42.5 42.91h92.083c19.55-.16 35.417-16.12 35.417-35.785 0-17.685-12.837-32.218-29.679-34.96z"/>
+    <path d="M45.225 42.924c.047-.01.094-.017.14-.024l2.818-.475 1.407-2.487.072-.127"/>
+    <path d="M51.747 36.458C61.188 22.51 77.027 14 94 14c23.163 0 43.268 15.458 49.244 37.719" stroke-dasharray="5.922,3.948"/>
+    <path d="M143.727 53.63l.722 2.912 2.962.482"/>
+    <path d="M151.273 57.803C164.026 61.209 173 72.72 173 86.215c0 16.282-13.206 29.64-29.442 29.785H51.5C31.392 115.863 15 99.305 15 79.09c0-17.287 11.776-32.008 28.292-35.78" stroke-dasharray="5.911,3.941"/>
+    <path d="M120 82a5 5 0 0 0-5-5 5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5zM73 80h8l11 11h14l5-5M85 46a5 5 0 0 0-5-5 5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5zM99 30a5 5 0 0 0-5-5 5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5zM85 46h19l11 11v20"/>
+  </g>
+</svg>
+
+            <h4>Cloud</h4>
+</a><a href="/services/product-development/" class="block service-icon">            <svg id="prototype-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225 130"><style>.st2,.st3,.st4{fill:none;stroke:#332d37;stroke-width:2;stroke-miterlimit:10}.st3{stroke-linecap:round;stroke-linejoin:round}.st4{stroke-dasharray:4,2}</style><g transform="translate(-12, -6) scale(1.1)"><path class="st3" d="M114 41h23v24h-23z"/><path class="st2" d="M108 63v2h-2"/><path class="st4" d="M104 65H81"/><path class="st2" d="M80 65h-2v-2"/><path class="st4" d="M78 61V44"/><path class="st2" d="M78 43v-2h2"/><path class="st4" d="M82 41h23"/><path class="st2" d="M106 41h2v2"/><path class="st4" d="M108 45v17"/><path class="st3" d="M50 106v6c0 .552.449 1 1 1h57V29H58"/><path class="st3" d="M58 23h56v96H51a7 7 0 0 1 0-14h7V9h-7a7 7 0 0 0-7 7M44 112V16M137 45h22l12-12M137 53h28l6-6"/><circle class="st2" cx="175" cy="43" r="5"/><circle class="st2" cx="175" cy="29" r="5"/><path class="st3" d="M137 61h22l12 12"/><circle class="st2" cx="175" cy="77" r="5"/><circle class="st2" cx="175" cy="101" r="5"/><circle class="st2" cx="134" cy="92" r="5"/><path class="st3" d="M120 65v13l10 10M130 65v7l10 10h16l15.5 15.5"/><path class="st4" d="M102 68v10l-9 9M59 53h16M90 68v4L77 85H58"/><g><path class="st2" d="M87 97c1.38 0 2.63-.56 3.536-1.464M92 92c0-1.38-.56-2.63-1.464-3.536M87 87c-1 0-2.63.56-3.536 1.464M82 92c0 1 .56 2.63 1.464 3.536"/></g></g></svg>
+
+            <h4>Product Develop&shy;ment</h4>
+</a><a href="/services/hardware-design/" class="block service-icon">            <svg id="hardware-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 130"><style>.st3{fill:none;stroke:#332d37;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g transform="translate(-12, -6) scale(1.1)"><path class="st3" d="M145 29H83a5 5 0 0 0-5 5v62a5 5 0 0 0 5 5h44.929a5 5 0 0 0 3.535-1.464l17.072-17.072A5 5 0 0 0 150 78.93V34a5 5 0 0 0-5-5z"/><path class="st3" d="M146 34v44.929a.997.997 0 0 1-.293.708l-17.07 17.07a.997.997 0 0 1-.708.293H110"/><circle class="st3" cx="87" cy="38" r="5"/><circle class="st3" cx="87" cy="52" r="5"/><circle class="st3" cx="87" cy="92" r="5"/><circle class="st3" cx="101" cy="38" r="5"/><path class="st3" d="M89 8a3 3 0 0 0-3 3v9a3 3 0 1 0 6 0v-9a3 3 0 0 0-3-3zM106 8a3 3 0 0 0-3 3v9a3 3 0 1 0 6 0v-9a3 3 0 0 0-3-3zM122 8a3 3 0 0 0-3 3v9a3 3 0 1 0 6 0v-9a3 3 0 0 0-3-3zM139 8a3 3 0 0 0-3 3v9a3 3 0 1 0 6 0v-9a3 3 0 0 0-3-3z"/><g><path class="st3" d="M89 107a3 3 0 0 0-3 3v9a3 3 0 0 0 6 0v-9a3 3 0 0 0-3-3zM106 107a3 3 0 0 0-3 3v9a3 3 0 0 0 6 0v-9a3 3 0 0 0-3-3zM122 107a3 3 0 0 0-3 3v9a3 3 0 0 0 6 0v-9a3 3 0 0 0-3-3zM139 107a3 3 0 0 0-3 3v9a3 3 0 1 0 6 0v-9a3 3 0 0 0-3-3z"/></g><g><path class="st3" d="M57 90a3 3 0 0 0 3 3h9a3 3 0 0 0 0-6h-9a3 3 0 0 0-3 3zM57 73a3 3 0 0 0 3 3h9a3 3 0 0 0 0-6h-9a3 3 0 0 0-3 3zM57 57a3 3 0 0 0 3 3h9a3 3 0 0 0 0-6h-9a3 3 0 0 0-3 3zM57 40a3 3 0 0 0 3 3h9a3 3 0 0 0 0-6h-9a3 3 0 0 0-3 3z"/></g><g><path class="st3" d="M156 90a3 3 0 0 0 3 3h9a3 3 0 1 0 0-6h-9a3 3 0 0 0-3 3zM156 73a3 3 0 0 0 3 3h9a3 3 0 1 0 0-6h-9a3 3 0 0 0-3 3zM156 57a3 3 0 0 0 3 3h9a3 3 0 1 0 0-6h-9a3 3 0 0 0-3 3zM156 40a3 3 0 0 0 3 3h9a3 3 0 1 0 0-6h-9a3 3 0 0 0-3 3z"/></g></g></svg>
+
+            <h4>Hard&shy;ware Design</h4>
+</a><a href="/services/edge-ai/" class="block service-icon">            <svg id="intelligence-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 130"><style>.st2{fill:none;stroke:#332d37;stroke-width:2;stroke-miterlimit:10}</style><g transform="translate(-12, -6) scale(1.1)"><circle class="st2" cx="127" cy="117" r="5"/><circle class="st2" cx="136" cy="49" r="5"/><circle class="st2" cx="93" cy="54" r="5"/><circle class="st2" cx="94" cy="70" r="5"/><circle class="st2" cx="93" cy="40" r="5"/><circle class="st2" cx="99" cy="88" r="5"/><circle class="st2" cx="108" cy="51" r="5"/><circle class="st2" cx="108" cy="20" r="5"/><circle class="st2" cx="118" cy="62" r="5"/><circle class="st2" cx="136" cy="35" r="5"/><path class="st2" d="M127 112V19c0-6.627-8.283-12-18.5-12-6.886 0-12.881 2.446-16.066 6.066A50.362 50.362 0 0 0 90 13c-16.303 0-30.067 7.829-34.497 18.563C43.893 36.625 36 46.564 36 58c0 15.232 14.004 27.803 32.14 29.734C68.981 93.537 73.962 98 80 98h26c6.627 0 12-5.373 12-12v-7L97 58M127 18v-4c1.12-2.375 4.2-4 7-4 3.316 0 6.087 2.308 6.81 5.404 8.35 2.053 15.226 6.22 19.267 11.56C167.383 31.363 172 37.81 172 45c0 1.715-.267 3.387-.766 5H173c6.627 0 12 5.373 12 12v13c0 6.421-5.047 11.649-11.389 11.97.255.978.389 1.992.389 3.03 0 8.284-8.507 15-19 15s-19-6.716-19-15V53M140 31l11-11"/><circle class="st2" cx="150" cy="42" r="5"/><path class="st2" d="M154 38l9-9"/><circle class="st2" cx="145" cy="62" r="5"/><circle class="st2" cx="159" cy="69" r="5"/><circle class="st2" cx="145" cy="82" r="5"/><circle class="st2" cx="161" cy="85" r="5"/><path class="st2" d="M149 58l21-21M164 69h8l12-12M149 86l4 4v5l-8 8M165 89l7 7M118 9v48M108 46v-9L84 13M104 16l-6-6M68 88h26M89 36L70 17M39 68h21l11 11h14l5-5"/><circle class="st2" cx="76" cy="67" r="5"/><circle class="st2" cx="55" cy="47" r="5"/><circle class="st2" cx="79" cy="47" r="5"/><path class="st2" d="M72 63l-7-7H36M55 32v10M75 43L58.5 26.5"/></g></svg>
+
+            <h4>Edge AI</h4>
+</a>      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col12-xs-12">
+    <div class="pv80 teal">
+      <h3>CONTACT US:</h3>
+      <h4 class="mt20">
+        <a href="mailto:contact@antmicro.com">contact@antmicro.com</a>
+      </h4>
+      <h4 class="mt10">
+        twitter: <a href="https://twitter.com/antmicro">@antmicro</a>
+      </h4>
+      <a class='btn more-btn ' href='/about/contact'><span class='more-text'>CONTACT FORM</span><span class='more-icon'><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_next" fill="#000000">
+            <polygon id="icon" points="75.0006 24 70.4826 28.428 102.4746 60 12.0006 60 12.0006 66 102.4746 66 70.4826 97.572 74.9106 102 114.0006 63"></polygon>
+        </g>
+    </g>
+</svg>
+</span></a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+  <div class="container-fluid no-gutters footer">
+    <div class="row">
+      <div class="col20-md-4 col20-xs-20 offset20-md-1 social text-left">
+<a href="/">          <img src="/images/logo_color.svg" class="sitemap_logo" alt="Logo color" />
+</a>        <div class="social-links">
+<a href="http://x.com/antmicro">              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_883_8)">
+<g clip-path="url(#clip1_883_8)">
+<path d="M11.65 8.47L18.93 0H17.2L10.87 7.35L5.83 0H0L7.64 11.12L0 20H1.73L8.41 12.23L13.75 20H19.58L11.66 8.47H11.65ZM9.29 11.22L8.52 10.11L2.35 1.3H5L9.97 8.41L10.74 9.52L17.2 18.76H14.55L9.28 11.22H9.29Z" fill="black"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_883_8">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+<clipPath id="clip1_883_8">
+<rect width="19.57" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+</a><a href="https://www.linkedin.com/company/antmicro-ltd">              <svg height="20" width="20" viewBox="4 4 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604 0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917 0 20.427 0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458 0 3.44 1.873 3.44 4.618v10.929h6.789zM22.959 24.922c2.367 0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531h.043zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zm-7.646-15.863V27.71h-6.789v20.427h6.789z" fill-rule="evenodd" clip-rule="evenodd" fill="#000"/></svg>
+
+</a><a href="http://github.com/antmicro">              <svg width="21" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.476 0 0 4.59 0 10.254c0 4.529 2.865 8.372 6.84 9.728.5.094.681-.222.681-.494 0-.243-.008-.888-.013-1.744-2.782.62-3.369-1.374-3.369-1.374-.455-1.185-1.11-1.5-1.11-1.5-.908-.636.07-.623.07-.623 1.002.072 1.53 1.056 1.53 1.056.892 1.567 2.341 1.115 2.911.852.09-.662.35-1.114.634-1.37-2.22-.259-4.555-1.139-4.555-5.068 0-1.119.39-2.034 1.03-2.751-.103-.26-.446-1.302.098-2.714 0 0 .84-.275 2.75 1.051A9.37 9.37 0 0 1 10 4.958a9.394 9.394 0 0 1 2.504.345c1.91-1.326 2.747-1.051 2.747-1.051.546 1.412.202 2.454.1 2.714.64.717 1.027 1.632 1.027 2.751 0 3.939-2.338 4.806-4.565 5.06.36.316.678.942.678 1.898 0 1.371-.012 2.477-.012 2.813 0 .274.18.593.688.493C17.137 18.623 20 14.782 20 10.254 20 4.59 15.522 0 10 0" fill="#000" fill-rule="evenodd"/></svg>
+</a>        </div>
+        <div class="attribution">
+          <h6>&copy; 2009-2026 Antmicro</h6>
+        </div>
+      </div>
+
+          <div class="col20-lg-3 col20-md-5 hidden-only-sm hidden-only-xs text-left">
+            <h6>AREAS</h6>
+            <h6><a href="/areas/robotics-and-drones">Robotics & Drones</a></h6>
+            <h6><a href="/areas/industry-and-transportation">Industry & Trans&shy;porta&shy;tion</a></h6>
+            <h6><a href="/areas/security-and-access-control">Security & Access Control</a></h6>
+            <h6><a href="/areas/lab-and-measurement">Lab & Measure&shy;ment</a></h6>
+            <h6><a href="/areas/defense-and-aerospace">Defense & Aero&shy;space</a></h6>
+          </div>
+          <div class="col20-lg-3 col20-md-5 hidden-only-sm hidden-only-xs text-left">
+            <h6>TECHNOLOGIES</h6>
+            <h6><a href="/technologies/fpga">FPGA</a></h6>
+            <h6><a href="/technologies/cpu-gpu">Hetero&shy;geneous CPU/GPU systems</a></h6>
+            <h6><a href="/technologies/risc-v">RISC-V</a></h6>
+            <h6><a href="/technologies/iot">Internet of Things</a></h6>
+            <h6><a href="/technologies/hmi">Human-Machine Inter&shy;faces</a></h6>
+            <h6><a href="/technologies/vision-systems">Vision Systems</a></h6>
+          </div>
+          <div class="col20-lg-3 col20-md-5 hidden-only-sm hidden-only-xs text-left">
+            <h6>SERVICES</h6>
+            <h6><a href="/services/software-and-bsps">Soft&shy;ware & BSPs</a></h6>
+            <h6><a href="/services/cloud">Cloud</a></h6>
+            <h6><a href="/services/product-development">Product Develop&shy;ment</a></h6>
+            <h6><a href="/services/hardware-design">Hard&shy;ware Design</a></h6>
+            <h6><a href="/services/edge-ai">Edge AI</a></h6>
+          </div>
+          <div class="col20-lg-3 col20-md-5 hidden-only-sm hidden-only-xs text-left">
+            <h6>PLATFORMS</h6>
+            <h6><a href="/nvidia-jetson/">NVIDIA® Jetson™ services</a></h6>
+            <h6><a href="/platforms/ultrascale-processing-module">Ultra&shy;Scale+ Pro&shy;cess&shy;ing Module</a></h6>
+            <h6><a href="/platforms/custom-camera-platforms">Custom Camera Platforms</a></h6>
+            <h6><a href="/platforms/memory-testing-platforms">Memory testing platforms</a></h6>
+            <h6><a href="/platforms/dc-scm-open-source-bmc-platforms">DC-SCM-compatible open source BMC</a></h6>
+            <h6><a href="/platforms/industrial-android">Industrial Android</a></h6>
+            <h6><a href="/platforms/renode">Renode</a></h6>
+            <h6><a href="/kenning/">Kenning</a></h6>
+          </div>
+      <div class="col20-lg-3 col20-md-5 hidden-only-sm hidden-only-xs text-left">
+        <h6>ANTMICRO</h6>
+        <h6><a href="/about/contact">Contact</a></h6>
+        <h6><a href="/about/partners">Partners</a></h6>
+        <h6><a href="/about/resources">Resources</a></h6>
+        <h6><a href="/about/company">The Company</a></h6>
+        <h6><a href="/about/careers">Careers</a></h6>
+        <h6><a href="/blog">Blog</a></h6>
+      </div>
+    </div>
+  </div>
+  <script src="/javascripts/all-7640daf4.js"></script>
+  </body>
+</html>
+
