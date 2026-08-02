@@ -28,3 +28,14 @@ EOF
     echo "Created new entry: $dest"
   fi
 }
+
+
+ask() {
+    if [ $# -eq 0 ]; then
+        echo "Please type a question. Example: ask what is arch linux"
+        return 1
+    fi
+    # Updated paths to match your exact nested folder structure
+    ~/gemini-chat/gemini-chat/venv/bin/python ~/gemini-chat/gemini-chat/c_questions.py "$*"
+}
+

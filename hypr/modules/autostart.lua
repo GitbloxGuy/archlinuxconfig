@@ -11,6 +11,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("udiskie &")
 	hl.exec_cmd("quickshell -p .config/quickshell/statusbar/shell.qml")
 	hl.exec_cmd("hypridle")
-    end)
+	hl.exec_cmd("[workspace special:magic silent] kitty") 
+	 end)
 
 

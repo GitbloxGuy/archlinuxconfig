@@ -31,3 +31,4 @@ vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { fg = "#d4af37", bold = true })
 -- Change the folder icon color to match
 vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { fg = "#d4af37" })
 
+

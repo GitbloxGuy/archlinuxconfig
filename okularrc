@@ -1,0 +1,13 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/C-book.pdf
+Name1[$e]=C-book.pdf
+
+[UiSettings]
+ColorScheme=BreezeDark

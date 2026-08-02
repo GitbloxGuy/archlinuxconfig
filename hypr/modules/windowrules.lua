@@ -57,3 +57,5 @@ hl.window_rule({
     move = {"cursor_x-(window_w*0.9)", "cursor_y-(window_h*0.01)"},
 })
 
+
+
