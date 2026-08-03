@@ -19,7 +19,7 @@ hl.config({
 	    tap_to_click = true,
 	    tap_and_drag = true,
             natural_scroll = true,
-	    scroll_factor = 0.9
+	    scroll_factor = 0.5,
         },
     },
 })

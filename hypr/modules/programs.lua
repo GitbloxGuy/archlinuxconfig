@@ -5,7 +5,7 @@
 -- Set programs that you use
  terminal    = "kitty"
 fileManager = "dolphin"
- menu = "wofi --show drun"
+ menu = "rofi -show drun"
  browser = "zen-browser"
 
 

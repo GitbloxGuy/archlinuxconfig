@@ -25,25 +25,38 @@ ShellRoot {
             anchors.leftMargin: 10
             spacing: 8
 
-            Repeater {
-                model: Hyprland.workspaces
+        Repeater {
+    	model: Hyprland.workspaces
 
-                Rectangle {
-                    width: 24
-                    height: 24
-                    radius: 4
-                    color: modelData.active ? "#fabd2f" : "#3c3836"
+	Item {
+        width: modelData.id > 0 ? 28 : 0
+        height: 24
+        visible: modelData.id > -9999
 
-                    Text {
-                        anchors.centerIn: parent
-                        text: modelData.id
-                        color: modelData.active ? "#282828" : "#ebdbb2"
-                        font.family: "JetBrainsMono Nerd Font"
-                        font.pixelSize: 12
-                    }
-                }
+        Column {
+            anchors.centerIn: parent
+            spacing: 1
+
+            Text {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: modelData.id
+                color: modelData.active ? "#fabd2f" : "#ebdbb2"
+                font.family: "JetBrainsMono Nerd Font"
+                font.pixelSize: 13
+                font.bold: modelData.active
+            }
+
+            Rectangle {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: 16
+                height: 1
+                radius: 1
+                color: "#fabd2f"
+                visible: modelData.active
             }
         }
+    }
+}        }
 
         // --- Clock (Center) ---
         Text {

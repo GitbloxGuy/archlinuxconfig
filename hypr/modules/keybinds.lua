@@ -45,6 +45,7 @@ end
 
 -- Map SUPER + S directly to the workspace toggler
 -- Reliable native toggle binding
+hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd("/home/star/.local/bin/pypr toggle term"))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
@@ -71,7 +72,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Clipboard picker keybind (SUPER + V)
-hl.bind("SUPER + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 
 
 

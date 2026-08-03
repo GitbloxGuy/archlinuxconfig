@@ -1,0 +1,103 @@
+* {
+    bg-main:    #0d1f0dee;
+    bg-input:   #142914;
+    bg-select:  #1f3d1f;
+    gold:       #d4af37;
+    gold-hi:    #ffd966;
+    fg:         #c9b458;
+    font:       "FreeMono 11";
+}
+
+configuration {
+    modi: "drun,run";
+    show-icons: false;
+    icon-theme: "papirus-dark";
+    terminal: "kitty";
+    matching: "normal";
+    case-sensitive: false;
+    display-drun: "";
+    sidebar-mode: false;
+}
+
+window {
+    width: 44em;
+    height: 14em;
+    location: center;
+    anchor: center;
+    padding: 0px;
+    border: 1px;
+    border-color: @gold;
+    border-radius: 7px;
+    background-color: @bg-main;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+    spacing: 10px;
+    padding: 14px;
+}
+
+inputbar {
+    background-color: @bg-input;
+    border-radius: 8px;
+    padding: 10px 10px;
+    spacing: 10px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: @gold;
+    enabled: false;
+    background-color: transparent;
+}
+
+entry {
+    placeholder: "";
+    placeholder-color: #8a7a3a;
+    text-color: @gold-hi;
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    lines: 8;
+    spacing: 2px;
+    scrollbar: false;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px 10px;
+    background-color: #0d1f0d00;
+    text-color: @fg;
+    border-radius: 8px;
+}
+
+element normal.normal {
+    background-color: #0d1f0d00;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: #0d1f0d00;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 1.1em;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected.normal {
+    background-color: @bg-select;
+    text-color: @gold-hi;
+    border: 0px 0px 0px 3px;
+    border-color: @gold-hi;
+}
