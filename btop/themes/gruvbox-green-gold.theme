@@ -1,0 +1,71 @@
+# Main bg, empty = terminal default (needed for transparency)
+theme[main_bg]=""
+theme[main_fg]="#ebdbb2"
+
+# Box titles and keybind highlights
+theme[title]="#a19c08"
+theme[hi_fg]="#a19c08"
+
+# Selected process row
+theme[selected_bg]="#3c3836"
+theme[selected_fg]="#b8bb26"
+
+# Dimmed/disabled text
+theme[inactive_fg]="#504945"
+
+# Text on top of graphs, meter track bg
+theme[graph_text]="#ebdbb2"
+theme[meter_bg]="#3c3836"
+theme[proc_misc]="#8ec07c"
+
+# Box outlines + dividers
+theme[cpu_box]="#504945"
+theme[mem_box]="#504945"
+theme[net_box]="#504945"
+theme[proc_box]="#504945"
+theme[div_line]="#3c3836"
+
+# Temperature: green -> gold -> red
+theme[temp_start]="#b8bb26"
+theme[temp_mid]="#fabd2f"
+theme[temp_end]="#fb4934"
+
+# CPU load: green -> gold -> orange
+theme[cpu_start]="#98971a"
+theme[cpu_mid]="#fabd2f"
+theme[cpu_end]="#fe8019"
+
+# Free mem/disk: green shades
+theme[free_start]="#98971a"
+theme[free_mid]="#b8bb26"
+theme[free_end]="#8ec07c"
+
+# Cached mem/disk: gold shades
+theme[cached_start]="#d79921"
+theme[cached_mid]="#fabd2f"
+theme[cached_end]="#fe8019"
+
+# Available mem/disk: muted gray -> green
+theme[available_start]="#665c54"
+theme[available_mid]="#928374"
+theme[available_end]="#b8bb26"
+
+# Used mem/disk: gold -> orange -> red (fills up = warning)
+theme[used_start]="#d79921"
+theme[used_mid]="#fe8019"
+theme[used_end]="#fb4934"
+
+# Network download: green
+theme[download_start]="#98971a"
+theme[download_mid]="#b8bb26"
+theme[download_end]="#8ec07c"
+
+# Network upload: gold
+theme[upload_start]="#d79921"
+theme[upload_mid]="#fabd2f"
+theme[upload_end]="#fe8019"
+
+# Process box gradient (cpu%/mem% per process)
+theme[process_start]="#98971a"
+theme[process_mid]="#fabd2f"
+theme[process_end]="#fe8019"

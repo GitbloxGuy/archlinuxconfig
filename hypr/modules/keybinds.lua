@@ -11,7 +11,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty yazi"))
-hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.window.float({ action = "toggle" }))
+
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
@@ -28,6 +28,26 @@ hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "left" }
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "down" }))
+
+
+local window = hl.dsp.window
+
+local function floatCenterMini()
+    local win = hl.get_active_window()
+    if win == nil then return end
+
+    local wasFloating = win.floating
+    hl.dispatch(window.float({ action = "toggle" }))
+
+    if not wasFloating then
+        -- it just became floating, so shrink + center it
+        hl.dispatch(window.resize({ x = 1200, y = 900 }))
+        hl.dispatch(window.center())
+    end
+    -- if it was already floating, this toggle is un-floating it — leave it alone
+end
+
+hl.bind(mainMod .. " + SHIFT + SPACE",floatCenterMini )
 
 
 
