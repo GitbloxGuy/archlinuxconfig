@@ -1,6 +1,6 @@
 # Main bg, empty = terminal default (needed for transparency)
 theme[main_bg]=""
-theme[main_fg]="#ebdbb2"
+theme[main_fg]="#258a07"
 
 # Box titles and keybind highlights
 theme[title]="#a19c08"
@@ -14,7 +14,7 @@ theme[selected_fg]="#b8bb26"
 theme[inactive_fg]="#504945"
 
 # Text on top of graphs, meter track bg
-theme[graph_text]="#ebdbb2"
+theme[graph_text]="#258a07"
 theme[meter_bg]="#3c3836"
 theme[proc_misc]="#8ec07c"
 
