@@ -11,7 +11,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty yazi"))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/.config/hypr/coding_workspace.zsh"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/.config/hypr/coding_workspace.sh"))
 
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())

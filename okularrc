@@ -7,7 +7,9 @@ ShowSidebar=true
 
 [Recent Files]
 File1[$e]=$HOME/Downloads/C-book.pdf
+File2[$e]=$HOME/Downloads/GpuUsage.qml
 Name1[$e]=C-book.pdf
+Name2[$e]=GpuUsage.qml
 
 [UiSettings]
 ColorScheme=BreezeDark
