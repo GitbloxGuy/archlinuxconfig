@@ -6,6 +6,6 @@
  terminal    = "kitty"
 fileManager = "dolphin"
  menu = "rofi -show drun"
- browser = "zen-browser"
+ browser = "/home/star/.tarball-installations/zen/zen"
 
 

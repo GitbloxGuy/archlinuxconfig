@@ -26,6 +26,6 @@ hyprctl dispatch 'hl.dsp.layout("splitratio exact 0.5")'
 hyprctl dispatch 'hl.dsp.layout("preselect d")'
 
 # 6. Open zen-browser — lands bottom-right, under the terminal
-zen-browser &
+zen &
 
 sleep 1

@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-WALLPAPER_DIR="$HOME/Wallpapercycle"
-INTERVAL=30
+WALLPAPER_DIR="$HOME/.config/wallpapercycle"
+INTERVAL=20
 
 pgrep -x "awww-daemon" > /dev/null || awww-daemon &
 sleep 5
