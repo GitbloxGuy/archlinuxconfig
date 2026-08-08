@@ -18,7 +18,13 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod.. " + ESCAPE", hl.dsp.exec_cmd("quickshell -p /home/star/.config/quickshell/powermenu/shell.qml"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("quickshell ipc -p .config/quickshell/statusbar/shell.qml call bar toggle"))
-hl.bind("Print", hl.dsp.exec_cmd("~/.local/bin/shot.sh"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd("~/.config/scripts/shot.sh"))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("~/.config/scripts/word_shot.sh"))
+hl.bind("Print", hl.dsp.exec_cmd("~/.config/scripts/fullshot.sh"))
+
+
+
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))

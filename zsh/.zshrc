@@ -6,6 +6,7 @@ export HISTFILE=$HOME/.config/zsh/.zsh_history
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.config/scripts:$PATH"
 # Path to your Oh My Zsh installation.
 export ZSH=$ZDOTDIR/.oh-my-zsh
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
