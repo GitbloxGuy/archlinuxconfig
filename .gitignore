@@ -33,3 +33,16 @@ arkrc
 dolphinrc
 
 kdeglobals
+
+okularpartrc
+
+okularrc
+
+QtProject.conf
+
+*rc
+
+google-chrome/
+
+waydroid-helper/
+

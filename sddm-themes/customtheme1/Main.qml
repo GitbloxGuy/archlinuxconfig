@@ -8,8 +8,8 @@ Rectangle {
     Image {
 	id: background
 	anchors.fill: parent
-	source: config.background
-	fillMode: Image.PreseveAspectCrop
+	source: "file://" + config.background
+	fillMode: Image.PreserveAspectCrop
     }
 
     Column {
@@ -66,3 +66,4 @@ ComboBox {
     arrowColor: "transparent"
     }
 }}
+

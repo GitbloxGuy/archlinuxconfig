@@ -22,7 +22,8 @@ hl.bind("SHIFT + Print", hl.dsp.exec_cmd("~/.config/scripts/shot.sh"))
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("~/.config/scripts/word_shot.sh"))
 hl.bind("Print", hl.dsp.exec_cmd("~/.config/scripts/fullshot.sh"))
 
-
+hl.bind("F9", hl.dsp.exec_cmd("pkill -SIGUSR1 -f jj_gui.py"))
+hl.bind("F10", hl.dsp.exec_cmd("pkill -SIGUSR2 -f jj_gui.py"))
 
 
 -- Move focus with mainMod + arrow keys
