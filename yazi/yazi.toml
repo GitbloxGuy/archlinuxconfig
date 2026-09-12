@@ -1,3 +1,4 @@
+# Yazi Configuration with imv as default image opener
 
 [preview]
 max_width  = 3000
@@ -6,4 +7,12 @@ max_height = 3000
 [opener]
 edit = [
     { run = 'nvim "$@"', block = true, desc = "nvim" },
+]
+image = [
+  { run = 'feh "$@"', desc = "imv", for = "unix" },
+]
+
+# Set imv as the default opener for images (pressing Enter opens directly)
+open = [
+  { run = 'feh "$@"', desc = "imv", for = "unix" },
 ]

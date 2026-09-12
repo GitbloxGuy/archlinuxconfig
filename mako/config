@@ -1,0 +1,30 @@
+# ~/.config/mako/config
+
+font=Freemono 11
+
+background-color=#282828cc
+text-color=#fabd2f
+border-size=0
+border-radius=8
+
+width=350
+height=120
+margin=10
+padding=10
+
+default-timeout=2500
+ignore-timeout=false
+
+icons=true
+max-icon-size=48
+
+# Urgency-specific overrides
+[urgency=low]
+border-color=#928374
+default-timeout=3000
+
+[urgency=high]
+border-color=#fb4934
+background-color=#3c3836
+default-timeout=2500
+

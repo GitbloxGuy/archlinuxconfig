@@ -67,4 +67,9 @@ hl.window_rule({
 })
 
 
-
+hl.layer_rule({
+    name  = "blur-mako",
+    match = { namespace = "^notifications$" },
+    blur  = true,
+    ignore_alpha = true,
+})

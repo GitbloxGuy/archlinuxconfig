@@ -1,0 +1,18 @@
+[Unit]
+Description=Vice game clip recorder daemon
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/home/star/.local/bin/vice start --no-open-ui
+Restart=on-failure
+RestartSec=3
+Environment=PATH=/home/star/.local/bin:/usr/local/bin:/usr/bin:/bin
+PassEnvironment=WAYLAND_DISPLAY DISPLAY XDG_RUNTIME_DIR DBUS_SESSION_BUS_ADDRESS XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+# Do not use shell syntax like ${HOME} or $(id -u) in Environment= lines here.
+
+[Install]
+# graphical-session.target alone was not enough: compositors that do not go
+# through uwsm never activate it, so the unit was enabled and then never
+# started (#139). default.target is always reached by the user manager.
+WantedBy=graphical-session.target default.target

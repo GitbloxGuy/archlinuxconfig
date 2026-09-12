@@ -35,7 +35,7 @@ hl.gesture({
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
     name        = "dell0a8c:00-27c6:0d41-touchpad",
-    sensitivity = 0,
+    sensitivity = 0.4,
 })
 
 

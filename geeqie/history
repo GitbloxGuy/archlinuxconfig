@@ -1,0 +1,17 @@
+#History lists
+
+[path_list]
+"/home/star/google-chrome"
+"/home/star"
+"/home/star/Pictures"
+"/home/star/Pictures/Screenshots"
+
+[shortcuts]
+"Home[path]/home/star"
+"Desktop[path]/home/star/Desktop"
+"Collections[path]/home/star/.local/share/geeqie/collections"
+
+[image_list]
+"/home/star/Pictures/Screenshots/screenshot_20260907_174157.png"
+
+#end
