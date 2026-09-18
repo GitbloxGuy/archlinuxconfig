@@ -29,12 +29,12 @@ clip_presets = []
 disable_while_focused = []
 
 [output]
-directory = "~/Videos/Vice"
+directory = "/Vice"
 image_directory = "/home/star/Pictures/Vice"
 filename_format = "vice_%Y%m%d_%H%M%S.mp4"
 tag_clips_with_game = true
 auto_playlist_by_game = true
-clip_name_template = ""
+clip_name_template = "$time_$date_$game_Vice$n"
 
 [sharing]
 enabled = true
