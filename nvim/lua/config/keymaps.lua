@@ -15,3 +15,22 @@ vim.keymap.set('n', '<leader>to', ':tabonly<CR>', { desc = 'Close other tabs' })
 for i = 1, 9 do
   vim.keymap.set('n', '<leader>' .. i, i .. 'gt', { desc = 'Go to tab ' .. i })
 end
+
+-- remaps
+
+-- Delete without yank
+vim.keymap.set({'n', 'x'}, 'd', '"_d', { desc = "Delete without copying" })
+vim.keymap.set({'n', 'x'}, 'c', '"_c', { desc = "Change without copying" })
+vim.keymap.set({'n', 'x'}, 'x', '"_x', { desc = "Delete char without copying" })
+
+-- Map a new shortcut for "Cut" operations (if you actually want to copy + delete)
+vim.keymap.set({'n', 'x'}, 'm', 'd', { desc = "Cut text (copy and delete)" })
+
+-- Cut the current line with Shift + X
+vim.keymap.set('n', 'X', 'dd', { desc = "Cut current line" })
+
+
+
+-- Disable Ctrl+Z from suspending Neovim
+vim.keymap.set({'n', 'v', 'i'}, '<C-z>', '<Nop>', { desc = "Disable suspend" })
+

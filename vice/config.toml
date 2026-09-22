@@ -6,7 +6,7 @@ follow_mouse_display = false
 encoder = "auto"
 crf = 23
 color_depth = "8"
-backend = "auto"
+backend = "gsr"
 capture_audio = true
 desktop_volume = 1.0
 microphone_volume = 1.0
@@ -29,7 +29,7 @@ clip_presets = []
 disable_while_focused = []
 
 [output]
-directory = "/Vice"
+directory = "/home/star/Videos/Vice"
 image_directory = "/home/star/Pictures/Vice"
 filename_format = "vice_%Y%m%d_%H%M%S.mp4"
 tag_clips_with_game = true
@@ -54,4 +54,4 @@ check_on_start = true
 sound_volume = 1
 
 [ui]
-hardware_video_decode = false
+hardware_video_decode = true
