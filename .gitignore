@@ -13,6 +13,7 @@ session/
 pulse/
 user-dirs.dirs
 user-dirs.locale
+mimeapps.list
 
 # === Applications & Browsers ===
 zen/
