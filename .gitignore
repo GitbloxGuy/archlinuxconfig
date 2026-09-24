@@ -1,55 +1,29 @@
+
+# === Zsh & Shell ===
 zsh/.zsh_history
-
 zsh/.zcompdump*
+starship/cache/
 
-zen/
-
-go/
-
-gtk-3.0/
-
-go/
-
-dconf/
-
-session/
-
-discord/
-
-starship/cache
-
-obs-studio/
-
-/home/star/.config/mpv/shaders/cache
-
-pulse/
-
-electron-builder.json
-
-trashrc
-
-arkrc
-
-dolphinrc
-
-kdeglobals
-
-okularpartrc
-
-okularrc
-
-QtProject.conf
-
+# === Core System & Desktop Configs ===
 *rc
-
-google-chrome/
-
-waydroid-helper/
-
-Restore_Firefox/
-
-user-dirs.dirs/
-
+kdeglobals
+QtProject.conf
+dconf/
+session/
+pulse/
+user-dirs.dirs
 user-dirs.locale
 
+# === Applications & Browsers ===
+zen/
+discord/
+obs-studio/
+google-chrome/
+waydroid-helper/
+Restore_Firefox/
+/home/star/.config/mpv/shaders/cache/
 
+# === Development & Build Artifacts ===
+go/
+gtk-3.0/
+electron-builder.json
