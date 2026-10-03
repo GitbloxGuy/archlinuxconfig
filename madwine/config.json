@@ -1,0 +1,9 @@
+{
+  "prefix": "/home/star/.local/share/madwine/prefix",
+  "reuseSteamProton": false,
+  "menuShortcut": false,
+  "installer": null,
+  "proton": "/home/star/.local/share/madwine/proton/GE-Proton11-5-x86_64",
+  "umu": "/home/star/.local/share/madwine/umu/umu/umu-run",
+  "setupDone": true
+}

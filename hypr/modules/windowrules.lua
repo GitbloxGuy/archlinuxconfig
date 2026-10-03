@@ -1,3 +1,4 @@
+
 -------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
@@ -72,4 +73,37 @@ hl.layer_rule({
     match = { namespace = "^notifications$" },
     blur  = true,
     ignore_alpha = true,
+})
+
+
+
+
+hl.window_rule({
+    match = { class = "gamescope" },
+    fullscreen = true,
+})
+
+hl.window_rule({
+    match = { class = "^steam_app_.*$" },
+    fullscreen = true,
+})
+
+hl.window_rule({
+    match = { class = "heroic" },
+    float = true,
+})
+
+hl.window_rule({
+    match = { title = "^.*Launcher.*$" },
+    float = true,
+})
+
+hl.window_rule({
+    match = { class = "gamescope" },
+    immediate = true,
+})
+
+hl.window_rule({
+    match = { class = "^steam_app_.*$" },
+    immediate = true,
 })
